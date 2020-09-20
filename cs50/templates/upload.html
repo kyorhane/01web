@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block body %}
+<div class="upload-gallery">
+    <form action="/upload" method="POST">
+        <div>
+            <h1>Change Gallery Images</h1>
+            <select name="gallery" id="inputGroupSelect01">
+                <option selected>Choose a gallery</option>
+                {% for x in range(1,7) %}
+                <option>Gallery {{ x }}</option>
+                {% endfor %}
+                <option>xjumboBG</option>
+                <option>xjumboIMG1</option>
+                <option>xjumboIMG2</option>
+                <option>xjumboIMG3</option>
+                <option>yjumboBG</option>
+                <option>zjumboBG</option>
+            </select>
+            <input name="imgurl" type="url" aria-label="url" id="file-input" oninput="thumbnail()" autocomplete="off">
+            <input type="submit" value="Submit"></input>
+        </div>
+    </form>
+    <div>
+        <img id="preview" src="../static/template.png" width="300px" height="400px" alt="Paste an Image URL">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,178 @@
+body {
+    background-color: rgba(180, 100, 120, 0.5);
+}
+
+.box {
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: royalblue;
+    text-align: center;
+}
+
+.box input[type="text"], .box input[type="password"] {
+    background: white;
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgba(180, 100, 120, 0.5);
+}
+
+.gallery {
+    display: flex;
+    height: 20rem;
+    width: 15rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.gallery:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: saturation;
+    transition: 500ms ease-in-out;
+}
+
+.gallery:hover a {
+    opacity: 1;
+    transition: 700ms ease-in-out;
+}
+
+/* #one {
+    background-image: url(#);
+}
+
+#two {
+    background-image: url(#);
+}
+
+#three {
+    background-image: url(#);
+}
+
+#four {
+    background-image: url(#);
+}
+
+#five {
+    background-image: url(#);
+}
+
+#six {
+    background-image: url(#);
+} */
+
+.gallery a {
+    display: flex;
+    position: relative;
+    align-self: center;
+    opacity: 0;
+    color: #fff;
+    font: 1.5rem "Tahoma";
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.upload-gallery {
+    text-align: center;
+    justify-self: center;
+}
+
+.upload-gallery h1 {
+    margin: 0.5rem 0 0 0;
+}
+
+.upload-gallery select {
+    height: 40px;
+    padding: 0 1rem;
+    margin: 1rem 0 0 0;
+}
+
+.upload-gallery input {
+    height: 40px;
+}
+
+#preview {
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+/* .xjumbo {
+    background: url(#x) center / cover no-repeat black;
+    background-blend-mode: luminosity;
+}
+
+.yjumbo {
+    background: url(#y) center / cover no-repeat black;
+    background-blend-mode: luminosity;
+}
+
+.zjumbo {
+    background: url(#z) center / cover no-repeat black;
+    background-blend-mode: luminosity;
+} */
+
+.container-fluid .jumbotron {
+    background: center / cover no-repeat black;
+    background-blend-mode: luminosity;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.container-fluid .jumbotron h1 {
+    font-weight: bold;
+}
+
+.container-fluid .jumbotron .lead {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container-fluid .jumbotron p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nightmode {
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+.row img {
+    object-fit: cover;
+}
+
+.modalselect {
+    display: block;
+}
+
+/* body{
+    background: rgba(100, 100, 255, 0.4);
+    background-size: cover;
+} */
+
+/* .upload-gallery {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font: 2rem "Monospace";
+    color: rgb(100, 0, 194);
+}
+
+img {
+    margin: 1rem;
+    object-fit: cover;
+} */

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Y
+{% endblock %}
+
+{% block body %}
+  <body>
+    <h1 class="text-center">Welcome to Y!</h1>
+    <div id="nav-placeholder"></div>
+    <div class="container-fluid">
+      {{ ybg|safe }}
+      <div class="modal fade" id="modaltxt" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form action="/y" method="POST">
+                  <div class="form-group">
+                    <select class="modalselect" name="txtColumn">
+                      <option selected>Choose a part</option>
+                      <option>ytxtH</option>
+                      <option>ytxtP1</option>
+                      <option>ytxtP2</option>
+                    </select>
+                    <label for="message-text" class="col-form-label">Message</label>
+                    <textarea name="modaltxt" class="form-control" id="message-text" placeholder="Write Something"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary"></input>
+                  </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row row-cols-2">
+        {{ ybox1|safe }}
+        {{ ybox2|safe }}
+      </div>
+    </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
+{% endblock %}

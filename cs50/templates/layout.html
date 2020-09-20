@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Final Project: {% block title %}{% endblock %}</title>
+    <script src="../static/script.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-white text-capitalize justify-content-between">
+      <a class="navbar-brand" href="/">CS50</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  
+        <div class="navbar-nav nav-justified w-100">
+          {% if session.user_id %}
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="x">x</a>
+              <a class="nav-link" href="y">y</a>
+              <a class="nav-link" href="z">z</a>
+              <a class="nav-link" href="upload">Upload</a>
+              <a class="nav-link" href="logout">Log Out</a>
+          {% else %}
+              <a class="nav-link" href="login">Log In</a>              
+              <a class="nav-link" href="register">Register</a>
+          {% endif %}
+              <button onclick="darkfunc()">Night Mode</button>
+          </div>
+      </div>
+    </nav>
+    {% block body %}{% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

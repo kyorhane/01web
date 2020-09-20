@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <form onsubmit="return pwcheck(this)" action="{{ url_for('register') }}" method="POST" class="box">
+        <h1 style="font: bold 1.5rem Monospace;">Register an Account</h1>
+        <div class="form-group">
+            <input name="username" type="text" class="form-control" placeholder="Username" autocomplete="off" required>
+            <input name="password" type="password" class="form-control" placeholder="Password" required>
+            <input name="confirmation" type="password" class="form-control" placeholder="Confirm Your Password" required>
+            <input type="submit" class="btn btn-primary">
+        </div>
+        <!-- <p style="font: 1rem Monospace;">Password must contain at least 1 Uppercase Letter, 1 Lowercase Letter, 1 Number, and 1 Special Character.</p> -->
+    </form>
+</div>
+{% endblock %}
