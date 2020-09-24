@@ -76,13 +76,12 @@ def register():
                     print(registrantID)
                     
                     # urls for default image gallery
-                    defimg = "https://images.unsplash.com/photo-1600196767962-a426ea6b3da4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
                     defxjumbo = "https://images.unsplash.com/photo-1600187831862-40bde7c4bfdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
                     defyzjumbo = "https://images.unsplash.com/photo-1600340145666-bc8292e2266c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
                     
-                    db.execute("""INSERT INTO gallery (user_id, img1, img2, img3, img4, img5, img6)
-                                VALUES (:user_id, :imgdef, :imgdef, :imgdef, :imgdef, :imgdef, :imgdef)""",
-                                {"user_id": registrantID, "imgdef": defimg})
+                    db.execute("""INSERT INTO gallery (user_id)
+                                VALUES (:user_id)""",
+                                {"user_id": registrantID})
                     db.execute("""INSERT INTO xjumbo (user_id, xjumboBG, xjumboIMG1, xjumboIMG2, xjumboIMG3)
                                 VALUES (:user_id, :imgdef, :imgdef, :imgdef, :imgdef)""",
                                 {"user_id": registrantID, "imgdef": defxjumbo})
